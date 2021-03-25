@@ -3,7 +3,7 @@ let daftarBuku = [
         id: 0,
         judul: 'Inestable',
         kategori: 'Novel',
-        cover: 'inestable.jpg',
+        cover: 'Inestable.jpg',
         harga: 65000,
         stok: 10
     },
@@ -21,6 +21,70 @@ let daftarBuku = [
         kategori: 'Komik',
         cover: 'demonslayer.jpg',
         harga: 20000,
+        stok: 10
+    },
+    {
+        id: 3,
+        judul: 'Bukan Cinderella',
+        kategori: 'Novel',
+        cover: 'bukancinderella.jpg',
+        harga: 85000,
+        stok: 10
+    },
+    {
+        id: 4,
+        judul: 'Fragmen Sejarah Intelektual',
+        kategori: 'Sejarah',
+        cover: 'Fragmen_Sejarah_Intelektual.jpg',
+        harga: 160000,
+        stok: 10
+    },
+    {
+        id: 5,
+        judul: 'Sultan Mahmud Badaruddin II',
+        kategori: 'Sejarah',
+        cover: 'sultanmahmud.jpg',
+        harga: 90000,
+        stok: 10
+    },
+    {
+        id: 6,
+        judul: 'Mahir Statistik Multivariat dengan SPSS',
+        kategori: 'Teknologi',
+        cover: 'spss.jpg',
+        harga: 90000,
+        stok: 10
+    },
+    {
+        id: 7,
+        judul: 'Prinsip-Prinsip Lembaga Keuangan Syariah',
+        kategori: 'Finansial',
+        cover: 'Prinsip-Prinsip-Lembaga-Keuangan-Syariah.jpg',
+        harga: 181000,
+        stok: 10
+    },
+    {
+        id: 8,
+        judul: 'Memahami Supervisi Audit Intern Bank',
+        kategori: 'Finansial',
+        cover: 'AuditInternBank.jpg',
+        harga: 85000,
+        stok: 10
+    },
+    {
+        id: 9,
+        judul: 'Dinamika Sejarah Hukum Dari Filosofi Hingga Profesi Hukum',
+        kategori: 'Hukum',
+        cover: 'sejarahhukum.jpg',
+        harga: 47000,
+        stok: 10
+    },
+    {
+        id: 10,
+        judul: 'Filsafat Hukum Pancasila&Semiotika Hukum Pancasila',
+        kategori: 'Hukum',
+        cover: 'filsafathukum.jpg',
+        harga: 140000,
         stok: 10
     }
 ]
