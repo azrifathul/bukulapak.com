@@ -414,3 +414,23 @@ ul {
 .open-button:hover {
   opacity: 1;
 }
+
+.cart-button {
+  margin-top: 10px;
+  color: #eb2140;
+  font-size: 18px;
+  /* border: 1px solid #eb2140; */
+  border-radius: 8px;
+  padding: 6px 0;
+  /* margin: 10px 30px 10px 0; */
+}
+
+.judul {
+  font-size: 20px;
+  margin: 12px 0;
+}
+
+.money {
+  font-size: 20px;
+  margin: 12px 0;
+}
