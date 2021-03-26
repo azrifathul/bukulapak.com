@@ -8,12 +8,8 @@ function ShowListBuku(arrBuku){
         buku.innerHTML = `<img src="${valBuku.cover}">
         <h4>${valBuku.judul}</h4>
         <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-            <i class="fa fa-star-o" aria-hidden="true"></i>
-        </div>
+                    <p>Rating: ${valBuku.rating} of 5</p>
+                </div>
         <p>Rp. ${moneyFormatter(valBuku.harga)}</p>`
         document.getElementById("boxBuku").appendChild(buku)
 

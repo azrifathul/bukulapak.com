@@ -28,5 +28,6 @@ function addCatalog(){
     daftarBuku.push(objBuku);
     ShowListBuku(daftarBuku);
     displayRecomendedBook();
+    closeForm()
     console.log(judul);
 }
