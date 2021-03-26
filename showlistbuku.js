@@ -1,110 +1,28 @@
-let daftarBuku = [
-    {
-        id: 0,
-        judul: 'Inestable',
-        kategori: 'Novel',
-        cover: 'Inestable.jpg',
-        harga: 65000,
-        stok: 10
-    },
-    {
-        id: 1,
-        judul: 'Detektif Conan',
-        kategori: 'Komik',
-        cover: 'detektifconan.jpg',
-        harga: 18000,
-        stok: 10
-    },
-    {
-        id: 2,
-        judul: 'Demon Slayer',
-        kategori: 'Komik',
-        cover: 'demonslayer.jpg',
-        harga: 20000,
-        stok: 10
-    },
-    {
-        id: 3,
-        judul: 'Bukan Cinderella',
-        kategori: 'Novel',
-        cover: 'bukancinderella.jpg',
-        harga: 85000,
-        stok: 10
-    },
-    {
-        id: 4,
-        judul: 'Fragmen Sejarah Intelektual',
-        kategori: 'Sejarah',
-        cover: 'Fragmen_Sejarah_Intelektual.jpg',
-        harga: 160000,
-        stok: 10
-    },
-    {
-        id: 5,
-        judul: 'Sultan Mahmud Badaruddin II',
-        kategori: 'Sejarah',
-        cover: 'sultanmahmud.jpg',
-        harga: 90000,
-        stok: 10
-    },
-    {
-        id: 6,
-        judul: 'Mahir Statistik Multivariat dengan SPSS',
-        kategori: 'Teknologi',
-        cover: 'spss.jpg',
-        harga: 90000,
-        stok: 10
-    },
-    {
-        id: 7,
-        judul: 'Prinsip-Prinsip Lembaga Keuangan Syariah',
-        kategori: 'Finansial',
-        cover: 'Prinsip-Prinsip-Lembaga-Keuangan-Syariah.jpg',
-        harga: 181000,
-        stok: 10
-    },
-    {
-        id: 8,
-        judul: 'Memahami Supervisi Audit Intern Bank',
-        kategori: 'Finansial',
-        cover: 'AuditInternBank.jpg',
-        harga: 85000,
-        stok: 10
-    },
-    {
-        id: 9,
-        judul: 'Dinamika Sejarah Hukum Dari Filosofi Hingga Profesi Hukum',
-        kategori: 'Hukum',
-        cover: 'sejarahhukum.jpg',
-        harga: 47000,
-        stok: 10
-    },
-    {
-        id: 10,
-        judul: 'Filsafat Hukum Pancasila&Semiotika Hukum Pancasila',
-        kategori: 'Hukum',
-        cover: 'filsafathukum.jpg',
-        harga: 140000,
-        stok: 10
-    }
-]
-
 function ShowListBuku(arrBuku){
-    // let lsInfoUser = document.createElement("ul");
-    // lsInfoUser.setAttribute("id", "info-user");
-    // lsInfoUser.setAttribute("style", "list-style-type:none;");               
-    // console.log(document.getElementsByClassName('box col-1-3')[0])
-    // document.getElementsByClassName('box col-1-3')[0].appendChild(lsInfoUser);
+    document.getElementById('boxBuku').innerHTML = ""
+
     for (let i = 0; i < arrBuku.length; i++) {
         const valBuku = arrBuku[i];
-        let boxBuku = document.createElement("div")
-        boxBuku.setAttribute("class", "buku")
-        document.getElementById('content').appendChild(boxBuku)
+        let buku = document.createElement("div")
+        buku.setAttribute("class", "col-4")
+        buku.innerHTML = `<img src="${valBuku.cover}">
+        <h4>${valBuku.judul}</h4>
+        <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+        </div>
+        <p>Rp. ${moneyFormatter(valBuku.harga)}</p>`
+        document.getElementById("boxBuku").appendChild(buku)
+
+        /* document.getElementById('content').appendChild(boxBuku)
         let judul = document.createElement("h1")
         judul.innerHTML = valBuku.judul;
         document.getElementsByClassName("buku")[i].appendChild(judul)
         let cover = document.createElement("img")
-        cover.setAttribute("src", `assets/${valBuku.cover}`)
+        cover.setAttribute("src", `${valBuku.cover}`)
         document.getElementsByClassName("buku")[i].appendChild(cover)
         let kategori = document.createElement("h4")
         kategori.innerHTML = `Kategori : ${valBuku.kategori}`
@@ -114,8 +32,26 @@ function ShowListBuku(arrBuku){
         document.getElementsByClassName("buku")[i].appendChild(harga) 
         let stok = document.createElement("h4")
         stok.innerHTML = `stok : ${valBuku.stok}`
-        document.getElementsByClassName("buku")[i].appendChild(stok) 
+        document.getElementsByClassName("buku")[i].appendChild(stok)  */
     }
 }
 
+function moneyFormatter(number) {
+    // write your code
+    let moneyStr = number.toString()
+    let counter = 0;
+    let result = ''
+    for (let i = moneyStr.length-1; i >= 0; i--) {
+      const char = moneyStr[i];
+      counter++;
+      result = char + result;
+      if(counter === 3 && i !== 0){
+        result = '.' + result
+        counter = 0;
+      }
+    }
+    return result;
+}
+
 ShowListBuku(daftarBuku);
+

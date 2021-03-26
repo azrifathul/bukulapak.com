@@ -23,10 +23,35 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#catalog">Catalog</a></li>
+                        <li onclick="showFormLogin()" id="login-admin" style="display:none;"><a href="#loginadmin">Login Admin</a></li>
+                        <li id="add-catalog" style="display:none;" onclick="openForm()"><a href="#catalog">Add Catalog</a></li>
                     </ul>
                 </nav>
                 <img src="cart.png" alt="cart" width="27px">
             </div>
+            <!-- start :tambahan coding untuk add catalog -->
+            <div class="form-popup" id="myForm">
+                <div class="form-container">
+                    <h3>Tambah Katalog</h3>
+            
+                    <label><b>Judul</b></label>
+                    <input type="text" placeholder="Input Judul" name="judul" id="judul" required>
+                    <label><b>Deskripsi</b></label>
+                    <input type="text" placeholder="Input Deskripsi" name="deskripsi" id="deskripsi" required>
+                    <label><b>Cover</b></label>
+                    <input type="text" placeholder="Input URL Cover" name="cover" id="cover" required>
+                    <label><b>Harga</b></label>
+                    <input type="text" placeholder="Input Harga" name="harga" id="harga" required>
+                    <label><b>Stok</b></label>
+                    <input type="text" placeholder="Input Stok" name="stok" id="stok" required>
+                    <label><b>Rating</b></label>
+                    <input type="text" placeholder="Input Rating" name="rating" id="rating" required>
+            
+                    <button class="btn" onclick="addCatalog()">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </div>
+            </div>
+            <!-- end :tambahan coding untuk add catalog -->
             <div class="row">
                 <div class="col-2">
                     <h1>Welcome to Bukulapak</h1>
@@ -77,158 +102,8 @@
     <br><br>
     <div class="small-container">
         <h2 class="title">Featured Products</h2>
-        <div class="row">
-            <div class="col-4">
-                <img src="HomoDeus.jpeg">
-                <br>
-                <br>
-                <h4>Homo Deus: A Brief History of Tomorrow</h4>
-                <div class="rating">
-                    <p>Rating: 3.5 of 5</p>
-                    <!-- <i class="fa fa-star"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i> -->
-                </div>
-                <p>Rp. 120.000</p>
-            </div>
-            <div class="col-4">
-                <img src="theArtOfLoving.jpg">
-                <br>
-                <br>
-                <h4>The Art Of Loving: Erich Fromm</h4>
-                <div class="rating">
-                    <p>Rating: 4 of 5</p>
-                    <!-- <i class="fa fa-star"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i> -->
-                </div>
-                <p>Rp. 100.000</p>
-            </div>
-            <div class="col-4">
-                <img src="ACourtofSilverFlames.jpg">
-                <br>
-                <br>
-                <h4>A Court of Silver Flames</h4>
-                <div class="rating">
-                    <p>Rating: 4 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-o aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 240.000</p>
-            </div>
-            <div class="col-4">
-                <img src="TheFourWinds.jpg">
-                <br>
-                <br>
-                <h4>The Four Winds</h4>
-                <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-half-o aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 200.000</p>
-            </div>
-            <div class="col-4">
-                <img src="howToWin.jpg">
-                <br>
-                <br>
-                <h4>How to Win Friend n Influence People</h4>
-                <div class="rating">
-                    <p>Rating: 3.5 of 5</p>
-                    <!-- <i class="fa fa-star"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" aria-hidden="true"></i> -->
-                </div>
-                <p>Rp. 150.000</p>
-            </div>
-            <div class="col-4">
-                <img src="theSubtleArt.jpg">
-                <br>
-                <br>
-                <h4>The Subtle Art of Not Giving a F*ck</h4>
-                <div class="rating">
-                    <!-- <i class="fa fa-star"></i> -->
-                    <p>Rating: 5 of 5</p>
-                    <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i> -->
-                </div>
-                <p>Rp. 90.000</p>
-            </div>
-            <div class="col-4">
-                <img src="Narnia.jpg">
-
-
-                <br>
-                <h4>The Lion, the Witch and the Wardrobe (The Chronicles of Narnia)</h4>
-                <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-o aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 80.000</p>
-            </div>
-            <div class="col-4">
-                <img src="GonewithTheWind.jpg">
-                <br>
-                <br>
-                <h4>Gone with the Wind</h4>
-                <div class="rating">
-                    <p>Rating: 5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 150.000</p>
-            </div>
-            <div class="col-4">
-                <img src="1984.jpg">
-                <br>
-                <br>
-                <h4>1984</h4>
-                <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-half-o aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 120.000</p>
-            </div>
-            <div class="col-4">
-                <img src="theRight.jpg">
-                <br>
-                <br>
-                <h4>The Righteous Mind: Jonathan Haidt</h4>
-                <div class="Rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
-                </div>
-                <p>Rp. 200.000</p>
-            </div>
+        <div class="row" id="boxBuku">
+            
         </div>
         <h2 class="title">New Books</h2>
         <div class="row">
@@ -236,38 +111,23 @@
                 <img src="Narnia.jpg">
                 <h4>The Lion, the Witch and the Wardrobe (The Chronicles of Narnia)</h4>
                 <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-o aria-hidden=" true""></i> -->
+                    <i class="fa fa-star aria-hidden=" true""></i>
+                    <i class="fa fa-star-o aria-hidden=" true""></i>
                 </div>
                 <p>Rp. 80.000</p>
-            </div>
-            <div class="col-4">
-                <img src="TheFourWinds.jpg">
-                <h4>The Four Winds</h4>
-                <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star-half-o aria-hidden=" true""></i> -->
-                </div>
-                <p>Rp. 150.000</p>
             </div>
             <div class="col-4">
                 <img src="GonewithTheWind.jpg">
                 <h4>Gone with The Wind</h4>
                 <div class="rating">
-                    <p>Rating: 5 of 5</p>
-                    <!-- <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
                     <i class="fa fa-star aria-hidden=" true""></i>
-                    <i class="fa fa-star aria-hidden=" true""></i> -->
+                    <i class="fa fa-star aria-hidden=" true""></i>
+                    <i class="fa fa-star aria-hidden=" true""></i>
                 </div>
                 <p>Rp. 150.000</p>
             </div>
@@ -275,49 +135,18 @@
                 <img src="theRight.jpg">
                 <h4>The Righteous Mind: Jonathan Haidt</h4>
                 <div class="rating">
-                    <p>Rating: 4.5 of 5</p>
-                    <!-- <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
                 </div>
                 <p>Rp. 200.000</p>
             </div>
         </div>
         <h2 class="title">Recommended Books</h2>
-        <div class="row">
-            <div class="col-2-recomend">
-                <img src="GonewithTheWind.jpg" class="recommended-books">
-            </div>
-            <div class="col-2-recomend"">
-                <p>Exclusively available on Bukulapak</p>
-                <h1>Gone with The Wind</h1>
-                <br>
-                <br>
-                <small>Since its original publication in 1936, Gone With the Wind—winner of the Pulitzer Prize and one
-                    of the best selling novels of all time—has been heralded by readers everywhere as The Great American
-                    Novel. Widely considered The Great American Novel, and often remembered for its epic film version, Gone 
-                    With the Wind explores the depth of human passions with an intensity as bold as its setting in the red
-                    hills of Georgia. A superb piece of storytelling, it vividly depicts the drama of the Civil War and Reconstruction.
-                    <br><br>
-                    <b>Nominated as one of America’s best-loved novels by PBS’s The Great American Read</b>
-                </small>
-                <a href="" class=" btn">Buy Now &#8594;</a>
-            </div>
-            <div class="col-2-recomend">
-                <img src="theSubtleArt.jpg" class="recommended-books">
-            </div>
-            <div class="col-2-recomend"">
-                <p>Exclusively available on Bukulapak</p>
-                <h1>The Subtle Art of Not Giving a F*ck</h1>
-                <br>
-                <br>
-                <small>There are only so many things we can give a f*ck about, so we need to figure out which ones really matter, Manson makes clear. While money is nice, caring about what you do with your life is better, because true wealth is about experience. A much-needed grab-you-by-the-shoulders-and-look-you-in-the-eye moment of real talk, filled with entertaining stories and profane, ruthless humor, The Subtle Art of Not Giving a F*ck is a refreshing slap for a generation to help them lead contented, grounded lives.<br><br>
-                <b>Best Seller in Motivational Self-Help</b>
-                </small>
-                <a href="" class=" btn">Buy Now &#8594;</a>
-            </div>
+        <div class="row" id="recomended-book">
+
         </div>
         <div class="import">
             <h2 class="title">Import Books</h2>
@@ -326,12 +155,11 @@
                     <img src="HomoDeus.jpeg">
                     <h4>Homo Deus: A Brief History of Tomorrow</h4>
                     <div class="rating">
-                        <p>Rating: 3.5 of 5</p>
-                        <!-- <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
                     </div>
                     <p>Rp. 120.000</p>
                 </div>
@@ -339,12 +167,11 @@
                     <img src="theArtOfLoving.jpg">
                     <h4>The Art Of Loving: Erich Fromm</h4>
                     <div class="rating">
-                        <p>Rating: 4 of 5</p>
-                        <!-- <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
                     </div>
                     <p>Rp. 100.000</p>
                 </div>
@@ -352,12 +179,11 @@
                     <img src="theSubtleArt.jpg">
                     <h4>The Subtle Art of Not Giving a F*ck</h4>
                     <div class="rating">
-                        <p>Rating: 5 of 5</p>
-                        <!-- <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i> -->
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <p>Rp. 90.000</p>
                 </div>
@@ -365,12 +191,11 @@
                     <img src="theRight.jpg">
                     <h4>The Righteous Mind: Jonathan Haidt</h4>
                     <div class="rating">
-                        <p>Rating: 4.5 of 5</p>
-                        <!-- <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
                     </div>
                     <p>Rp. 200.000</p>
                 </div>
@@ -444,48 +269,51 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 
-    <!----------------- footer ---------------------->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
-                    <h3>Download Our App</h3>
-                    <p>Download App for Android and ios mobile phone.</p>
-                    <div class="app-logo">
-                        <img src="app-store.png">
-                        <img src="en_badge_web_generic.png">
-                    </div>
-                </div>
-                <div class="footer-col-2">
-                    <img src="Bukulapak2.png">
-                    <p>Number one online bookstore in Indonesia </p>
-                </div>
-                <div class="footer-col-3">
-                    <h3>Useful links</h3>
-                    <ul>
-                        <li>Coupons</li>
-                        <li>Blog Post</li>
-                        <li>Return Policy</li>
-                        <li>Join Affiliate</li>
-                    </ul>
-                </div>
-                <div class="footer-col-4">
-                    <h3>Follow us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                    </ul>
+        <!----------------- footer ---------------------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="app-store.png">
+                    <img src="en_badge_web_generic.png">
                 </div>
             </div>
-            <hr>
-            <p class="copyright">Copyright 2021 - Kelompok 1</p>
+            <div class="footer-col-2">
+                <img src="Bukulapak2.png">
+                <p>Number one online bookstore in Indonesia </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
         </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Kelompok 1</p>
     </div>
 
 
 </body>
-
+<script src="data.js"></script>
+<script src="showlistbuku.js"></script>
+<script src="login.js"></script>
+<script src="addcatalog.js"></script>
+<script src="displayrecomended.js"></script>
 </html>
